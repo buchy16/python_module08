@@ -4,11 +4,17 @@ import site
 
 
 if (__name__ == "__main__"):
+    # test if the variable VIRTUAL_ENV is used, if it is, that mean that we are
+    # on a enve
     if ("VIRTUAL_ENV" in os.environ):
         print("MATRIX STATUS: Welcome to the construct\n")
 
         print(f"Current Python: {sys.executable}")
+        # os.environ is a huge dict with infos about the enve, python and more
         print(f"Virtual Environment: {os.environ['VIRTUAL_ENV_PROMPT']}")
+
+        # prefix is an attribut that contain the path of
+        # where python is intalled
         print(f"Environment Path: {sys.prefix}\n")
 
         print("SUCCESS: You're in an isolated environment !")
